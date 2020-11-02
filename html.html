@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目案例</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=	54aee41f8458501f73bfd7749a06d2cb">
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .whole {
+            width: 100%;
+            height: 100%;
+            background: rgba(140, 125, 126, 0.1);
+        }
+
+        .head {
+            width: 100%;
+            height: 64px;
+            background-image: linear-gradient(#64B2FF 0%, #3F76F8 100%);
+        }
+
+        .control {
+            font-size: 16px;
+            line-height: 64px;
+            color: #FFFFFF;
+            margin-left: 2.5%;
+            float: left;
+        }
+
+        .head a {
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 64px;
+            float: left;
+            text-decoration: none;
+            margin-left: 3.1%
+        }
+
+        .head a:hover {
+            background: red;
+        }
+
+        .index {
+            margin-left: 77.4%;
+        }
+
+        .total {
+            width: 100%;
+            height: 160px;
+            margin: 0 auto;
+            margin-top: 40px;
+            background: #FFFFFF;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            width: 20%;
+            float: left;
+            height: 160px;
+            background-image: linear-gradient(0deg, #FFFFFF 80%, #64ceff 100%);
+            position: relative;
+            border-radius: 3px;
+        }
+
+        .box img:nth-of-type(1) {
+            position: absolute;
+            bottom: 0;
+            left: 24px;
+        }
+
+        .box img:nth-of-type(2) {
+            width: 56px;
+            height: 56px;
+            position: absolute;
+            top: 48px;
+            left: 64px;
+        }
+
+        .box div:nth-of-type(1) {
+            font-family: DINAlternate-Bold;
+            font-size: 26px;
+            color: #4D4D4D;
+            margin-top: 51px;
+            margin-left: 152px;
+        }
+
+        .box div:nth-of-type(2) {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #A6A8B5;
+            margin-top: 8px;
+            margin-left: 152px;
+        }
+
+        .statistics {
+            width: 100%;
+            height: 580px;
+        }
+
+        .statistics1,
+        .statistics2,
+        .statistics3 {
+            height: 580px;
+            float: left;
+            background: #FFFFFF;
+        }
+
+        .statistics2 {
+            position: relative;
+        }
+
+        .statistics1,
+        .statistics2 {
+            margin-right: 5%;
+        }
+
+
+        .statistics1 {
+            width: 20%;
+        }
+
+
+        .statistics2,
+        .statistics3 {
+            width: 35%;
+        }
+
+        .text1 {
+            width: 84px;
+            height: 20px;
+            font-family: PingFangSC-Semibold;
+            font-size: 14px;
+            color: #717488;
+            margin-top: 18px;
+            margin-left: 24px;
+        }
+
+        #first,
+        #second,
+        #third {
+            height: 180px;
+        }
+
+        #button {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+        }
+
+        .bt {
+            width: 44px;
+            height: 32px;
+            font-size: 14px;
+            background: #FFFFFF;
+            border: 1px solid #E6E6E6;
+            border-radius: 0px 2px 2px 0px;
+        }
+
+        .bt:hover {
+            background: #f5f5f5;
+        }
+
+        #forth,
+        #five {
+            height: 271px;
+        }
+
+        #button1 {
+            position: absolute;
+            top: 290px;
+            right: 20px;
+        }
+
+        .bt1 {
+            width: 108px;
+            height: 32px;
+            background: #F5F6F8;
+            border: 1px solid #E6E6E6;
+            border-radius: 2px 0px 0px 2px;
+            font-size: 14px;
+        }
+
+        #six {
+            height: 580px;
+        }
+
+        .bt.active,
+        .bt1.active {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="head">
+            <div class="control">运营管理控制台</div>
+            <div class="service">
+                <div class="index"><a href="">门户</a></div>
+                <div class="about"><a href="">关于</a></div>
+                <div class="user"><a href="">admin</a></div>
+            </div>
+        </div>
+
+        <div class="total">
+            <div class="box">
+                <img src="/项目案例一切图/设备数浅.svg" alt="">
+                <img src="/项目案例一切图/数据-用户.png" alt="">
+                <div>78</div>
+                <div>项目数</div>
+            </div>
+            <div class="box">
+                <img src="/项目案例一切图/项目数浅.svg" alt="">
+                <img src="/项目案例一切图/数据-产品数.png" alt="">
+                <div>57,613</div>
+                <div>设备数</div>
+            </div>
+            <div class="box">
+                <img src="/项目案例一切图/视频流量浅.svg" alt="">
+                <img src="/项目案例一切图/数据-设备.png" alt="">
+                <div>17,198</div>
+                <div>集团用户数</div>
+            </div>
+            <div class="box">
+                <img src="/项目案例一切图/项目数浅.svg" alt="">
+                <img src="/项目案例一切图/数据-项目数.png" alt="">
+                <div>23,193</div>
+                <div>个人用户数</div>
+            </div>
+            <div class="box">
+                <img src="/项目案例一切图/设备数浅.svg" alt="">
+                <img src="/项目案例一切图/数据-设备.png" alt="">
+                <div>581</div>
+                <div>视频流量（GB）</div>
+            </div>
+        </div>
+
+        <div class="statistics">
+            <div class="statistics1">
+                <div class="text1">产品运营统计</div>
+                <div id="first"></div>
+                <div id="second"></div>
+                <div id="third"></div>
+            </div>
+            <div class="statistics2">
+                <div class="text1">产品运营统计</div>
+                <div id="button">
+                    <button class="bt" onclick="day()">日</button>
+                    <button class="bt" onclick="week()">周</button>
+                    <button class="bt" onclick="month()">月</button>
+                </div>
+                <div id="forth"></div>
+                <div id="button1">
+                    <button class="bt1" onclick="machine()">按设备数</button>
+                    <button class="bt1" onclick="people()">按人员数</button>
+                </div>
+                <div id="five"></div>
+            </div>
+            <div class="statistics3">
+                <div id="six"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    //绘制饼图
+    //取得三个饼图的公共属性
+    var optionPie = {
+        series: [{ //设置饼图的属性
+            name: '', //名称
+            type: 'pie', //饼图
+            radius: ['50%', '70%'], //饼图的大小    
+            data: [], //饼图的存储数据
+            center: ['30%', '50%'],
+            label: {
+                normal: {
+                    position: 'inner',
+                    show: false
+                }
+            }
+        }],
+        graphic: { //图形中间文字属性的设置
+            type: 'text',
+            left: '80px',
+            top: '85px',
+            style: {
+                text: '',
+                textAlign: 'center',
+                fill: "#A6A8B5",
+                fontSize: 14,
+            }
+        },
+        color: ['#84CD61', '#7AA7FF', '#FFBC41', '#F49C6A'], //环形颜色
+        legend: { //配置提示框
+            icon: 'circle', //提示框标识
+            itemWidth: 14,
+            itemHeight: 14,
+            orient: 'vertical',
+            data: ['视频设备', '报警设备', '智能设备', '存储设备'],
+            top: '40px',
+            right: '80px'
+        },
+        tooltip: {
+            trigger: "item",
+            show: 'true',
+            formatter: "{a} <br/>{b}: {c} ({d}%)",
+        },
+    };
+    //遍历饼图基础属性for in 循环
+    function copyObj(initoObj) {
+        var result = {};
+        for (var key in initoObj) {
+            result[key] = initoObj[key]
+        }
+        return result
+    }
+
+    //制作饼图
+    var pieChart = echarts.init(document.getElementById('first'));
+    var pieCharts = echarts.init(document.getElementById('second'));
+    var pieChartss = echarts.init(document.getElementById('third')); //取得容器
+
+    var option1 = copyObj(optionPie);
+    option1.series[0].name = '按设备类型';
+    option1.series[0].data = [{
+            value: 403,
+            name: '视频设备'
+        },
+        {
+            value: 314,
+            name: '报警设备'
+        },
+        {
+            value: 159,
+            name: '智能设备'
+        },
+        {
+            value: 125,
+            name: '存储设备'
+        },
+    ];
+    option1.graphic.style.text = '按设备类型'
+    pieChart.setOption(option1);
+
+    //同理完成其余两个饼图
+    var option2 = copyObj(optionPie);
+    option2.series[0].name = '按设备类型';
+    option2.series[0].data = [{
+            value: 403,
+            name: '视频设备'
+        },
+        {
+            value: 314,
+            name: '报警设备'
+        },
+    ];
+    option2.graphic.style.text = '按所需用户'
+    pieCharts.setOption(option2);
+
+    var option3 = copyObj(optionPie);
+    option3.series[0].name = '按设备协议';
+    option3.series[0].data = [{
+            value: 403,
+            name: '视频设备'
+        },
+        {
+            value: 314,
+            name: '报警设备'
+        },
+    ];
+    option2.graphic.style.text = '按设备协议'
+    pieChartss.setOption(option3);
+
+    //完成折线图
+    //完成折线图的基本属性
+    var optionLine = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        color: ['#2080F7', '#F7A326'],
+        legend: {
+            icon: 'circle',
+            itemWidth: 12,
+            itemHeight: 12,
+            top: 0,
+            right: 318,
+            data: ['设备数', '用户数'],
+        },
+        xAxis: {
+            name: '日期',
+            boundaryGap: false, //坐标与网格对齐
+            data: []
+        },
+        yAxis: {
+            type: 'value',
+            name: '单位/个',
+            axisLabel: {
+                formatter: '{value}(个)'
+            }, //Y轴每个都添加单位
+            splitLine: {
+                show: false
+            }, //去除网格线
+        },
+        series: [{
+                name: '设备数',
+                type: 'line',
+                data: [],
+                smooth: true,
+                areaStyle: {
+                    normal: {
+                        color: {
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                    offset: 0,
+                                    color: "#43B7FC"
+                                }, // 0% 处的颜色
+                                {
+                                    offset: 0.7,
+                                    color: "rgba(32,128,247,0.00)"
+                                }
+                            ], // 100% 处的颜色
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+                },
+            },
+            {
+                name: '用户数',
+                type: 'line',
+                data: [],
+                smooth: true,
+            }
+        ],
+    };
+
+    var lineChart = echarts.init(document.getElementById('forth'));
+    var option4 = copyObj(optionLine);
+    option4.series[0].data = [500, 800, 460, 500, 700, 1000, 2000, 800, 460, 500, 700, 1000];
+    option4.series[1].data = [400, 700, 1200, 600, 700, 800, 1000, 1500, 900, 700, 1300, 500];
+    option4.xAxis.data = ["23", "24", "26", "28", "30", "07/01", "02", "04", "06", "08", "10", "11"];
+
+    function day() {
+        var option4 = copyObj(optionLine);
+        option4.series[0].data = [500, 800, 460, 500, 700, 1000, 2000, 800, 460, 500, 700, 1000];
+        option4.series[1].data = [400, 700, 1200, 600, 700, 800, 1000, 1500, 900, 700, 1300, 500];
+        option4.xAxis.data = ["23", "24", "26", "28", "30", "07/01", "02", "04", "06", "08", "10", "11"];
+        lineChart.setOption(option4);
+    }
+    lineChart.setOption(option4);
+
+    //同理完成其他两个折线图
+
+
+    function week() {
+        var option5 = copyObj(optionLine);
+        option5.series[0].data = [2000, 800, 460, 500, 700, 1000, 2000, 800, 460, 500, 700, 1000];
+        option5.series[1].data = [400, 700, 1200, 600, 700, 800, 1000, 1500, 900, 700, 1300, 500];
+        option5.xAxis.data = ["1", "2", "3", "4", "1", "2", "3", "4", "1", "2", "3", "4"];
+        lineChart.setOption(option5);
+    }
+
+
+    function month() {
+        var option6 = copyObj(optionLine);
+        option6.series[0].data = [20000, 8000, 4600, 5000, 7000, 10000, 20000, 8000, 4600, 5000, 7000, 10000];
+        option6.series[1].data = [400, 700, 1200, 600, 700, 800, 1000, 1500, 900, 700, 1300, 500];
+        option6.xAxis.data = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+        lineChart.setOption(option6);
+    }
+
+    //完成点击事件的背景颜色变化
+    function method() {
+        var button = document.getElementById('button');
+        button.addEventListener('click', e => {
+            var buttonChild = e.currentTarget.children;
+            for (var i = 0; i < buttonChild.length; i++) {
+                buttonChild[i].classList.remove('active');
+            }
+            e.target.classList.add('active')
+        })
+    }
+    method();
+
+    function method1() {
+        var button1 = document.getElementById('button1');
+        button1.addEventListener('click', e => {
+            var buttonChild = e.currentTarget.children;
+            for (var i = 0; i < buttonChild.length; i++) {
+                buttonChild[i].classList.remove('active');
+            }
+            e.target.classList.add('active')
+        })
+    }
+    method1();
+
+
+
+    //绘制柱状图
+    var barChart = echarts.init(document.getElementById('five'));
+    var optionBar = {
+        tooltip: {},
+        grid: {
+            x: 130,
+            y2: 32,
+        },
+        legend: {
+            icon: 'circle',
+            itemWidth: 12,
+            itemHeight: 12,
+            top: 0,
+            right: 318,
+            data: ['按设备数', '按用户数'],
+        },
+        xAxis: {
+            type: 'value',
+            splitLine: {
+                show: false
+            },
+        },
+        yAxis: {
+            splitLine: {
+                show: false
+            },
+            type: 'category',
+            data: ["浙江省大项目", "一二三四五六七八", "整行hover", "一二三四五六七八", "浙江省大项目"],
+        },
+        series: [{
+            name: '项目名',
+            type: 'bar',
+            barWidth: 20,
+            data: [],
+            itemStyle: {
+                emphasis: {
+                    barBorderRadius: 10
+                },
+                normal: {
+                    barBorderRadius: 10,
+                    color: '',
+                    label: {
+                        show: true,
+                        position: 'right',
+                        textStyle: {
+                            color: '#A6A8B5',
+                            fontSize: 12,
+                        }
+                    }
+                },
+
+            }
+        }]
+    }
+
+
+    var option7 = copyObj(optionBar);
+    option7.series[0].data = [5, 20, 36, 10, 10];
+    option7.series[0].itemStyle.normal.color = '#8AC1FF';
+
+    function machine() {
+        var option7 = copyObj(optionBar);
+        option7.series[0].data = [5, 20, 36, 10, 10];
+        option7.series[0].itemStyle.normal.color = '#8AC1FF';
+        barChart.setOption(option7)
+    }
+    barChart.setOption(option7)
+
+    function people() {
+        var option8 = copyObj(optionBar);
+        option8.series[0].data = [10, 15, 20, 25, 30];
+        option8.series[0].itemStyle.normal.color = '#A6A8B5';
+        barChart.setOption(option8)
+    }
+
+
+
+    //绘制地图
+    var map = new AMap.Map('six', {
+        zoom: 11, //级别
+        center: [116.397428, 39.90923], //中心点坐标
+        viewMode: '3D' //使用3D视图
+    });
+</script>
